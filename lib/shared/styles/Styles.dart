@@ -1,11 +1,9 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 ThemeData lightTheme = ThemeData(
-  // useMaterial3: true,
+  useMaterial3: true,
   fontFamily: 'Varela',
   scaffoldBackgroundColor: Colors.white,
   colorScheme: ColorScheme.light(
@@ -18,46 +16,53 @@ ThemeData lightTheme = ThemeData(
       color: Colors.black,
     ),
     titleTextStyle: TextStyle(
-      fontSize: 19.0,
+      fontSize: 17.5,
       color: Colors.black,
       fontWeight: FontWeight.bold,
-      fontFamily: 'VarelaRound',
+      fontFamily: 'Varela',
     ),
     systemOverlayStyle: SystemUiOverlayStyle(
       statusBarColor: Colors.white,
       statusBarIconBrightness: Brightness.dark,
+      systemNavigationBarColor: Colors.white,
+      systemNavigationBarIconBrightness: Brightness.dark,
     ),
   ),
-  floatingActionButtonTheme: FloatingActionButtonThemeData(
-    backgroundColor: HexColor('0571d5'),
+  cardTheme: const CardTheme(
+    color: Colors.white,
   ),
 );
 
 ThemeData darkTheme = ThemeData(
-  // useMaterial3: true,
+  useMaterial3: true,
   fontFamily: 'Varela',
-  scaffoldBackgroundColor: HexColor('121212'),
+  scaffoldBackgroundColor: HexColor('141414'),
   colorScheme: ColorScheme.dark(
     primary: HexColor('2eb7c9'),
   ),
   appBarTheme: AppBarTheme(
-    backgroundColor: HexColor('121212'),
+    backgroundColor: HexColor('141414'),
     elevation: 0,
     iconTheme: const IconThemeData(
       color: Colors.white,
     ),
     titleTextStyle: const TextStyle(
-      fontSize: 19.0,
+      fontSize: 17.5,
       color: Colors.white,
       fontWeight: FontWeight.bold,
-      fontFamily: 'VarelaRound',
+      fontFamily: 'Varela',
     ),
     systemOverlayStyle: SystemUiOverlayStyle(
-      statusBarColor: HexColor('121212'),
+      statusBarColor: HexColor('141414'),
       statusBarIconBrightness: Brightness.light,
+      systemNavigationBarColor: HexColor('141414'),
+      systemNavigationBarIconBrightness: Brightness.light,
     ),
   ),
-  floatingActionButtonTheme: FloatingActionButtonThemeData(
-    backgroundColor: HexColor('2ab9ca'),
+  cardTheme: CardTheme(
+    color: Colors.grey.shade900.withOpacity(.2),
+  ),
+  dialogTheme: DialogTheme(
+    backgroundColor: Colors.grey.shade900,
   ),
 );

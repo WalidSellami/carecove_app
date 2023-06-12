@@ -7,22 +7,22 @@ class DioHelper {
   static void init() {
     dio = Dio(
       BaseOptions(
-        baseUrl: 'http://10.0.2.2',
+        baseUrl: 'http://192.168.1.25',
         receiveDataWhenStatusError: true,
       ),
     );
   }
 
 
-  Future<Response?> getData({
+  static Future<Response?> getData({
     required String url,
     Map<String , dynamic>? query,
     String? token,
 }) async {
 
     dio?.options.headers = {
-      'Content-Type': 'application/json',
-      'Authorization' : token,
+      'Accept': 'application/json',
+      'Authorization' : 'Bearer $token',
     };
 
 
@@ -31,7 +31,7 @@ class DioHelper {
   }
 
 
-  Future<Response?> postData({
+  static Future<Response?> postData({
     required String url,
     required Map<String , dynamic> data,
     Map<String , dynamic>? query,
@@ -39,8 +39,8 @@ class DioHelper {
   }) async {
 
     dio?.options.headers = {
-      'Content-Type': 'application/json',
-      'Authorization' : token,
+      'Accept': 'application/json',
+      'Authorization' : 'Bearer $token',
     };
 
 
@@ -49,16 +49,16 @@ class DioHelper {
   }
 
 
-  Future<Response?> putData({
+  static Future<Response?> putData({
     required String url,
-    required Map<String , dynamic> data,
+    Map<String , dynamic>? data,
     Map<String , dynamic>? query,
     String? token,
   }) async {
 
     dio?.options.headers = {
-       'Content-Type': 'application/json',
-       'Authorization' : token,
+       'Accept': 'application/json',
+       'Authorization' : 'Bearer $token',
     };
 
     return await dio?.put(url , data: data , queryParameters: query);
@@ -66,16 +66,16 @@ class DioHelper {
   }
 
 
-  Future<Response?> deleteData({
+  static Future<Response?> deleteData({
     required String url,
-    required Map<String , dynamic> data,
+    Map<String , dynamic>? data,
     Map<String , dynamic>? query,
     String? token,
   }) async {
 
     dio?.options.headers = {
-      'Content-Type': 'application/json',
-      'Authorization' : token,
+      'Accept': 'application/json',
+      'Authorization' : 'Bearer $token',
     };
 
 

@@ -1,28 +1,36 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:hexcolor/hexcolor.dart';
-import 'package:project_final/modules/startup/onBoarding/PageViewScreen.dart';
 import 'package:project_final/shared/component/Component.dart';
+import 'package:project_final/shared/cubit/checkCubit/Cubit.dart';
+
 
 class SplashScreen extends StatefulWidget {
-
   final Widget widgetStart;
-  SplashScreen({required this.widgetStart});
+  const SplashScreen({super.key, required this.widgetStart});
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderStateMixin {
-
+class _SplashScreenState extends State<SplashScreen>
+    with SingleTickerProviderStateMixin {
+  bool isVisible = false;
   late AnimationController animationController;
+  late Animation<double> animation;
 
   @override
   void initState() {
-    animationController = AnimationController(vsync: this , duration: const Duration(milliseconds: 500));
+    Future.delayed(const Duration(milliseconds: 750)).then((value) {
+      setState(() {
+        isVisible = true;
+      });
+    });
+    animationController = AnimationController(
+        vsync: this, duration: const Duration(milliseconds: 1000));
+    animation = Tween<double>(begin: 0, end: 1).animate(animationController);
     animationController.forward();
-    Future.delayed(const Duration(seconds: 3)).then((value) {
-       navigatorToNotBack(context: context, screen: widget.widgetStart);
+    Future.delayed(const Duration(milliseconds: 2000)).then((value) {
+      navigatorToNotBack(context: context, screen: widget.widgetStart);
+      CheckCubit.get(context).changeStatusScreen();
     });
     super.initState();
   }
@@ -33,40 +41,23 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
     super.dispose();
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Column(
-        children: [
-          Expanded(
-            child: Center(
-              child: AnimatedBuilder(
-                animation: animationController,
-                builder: (context , widget) => Transform.scale(
-                  scale: animationController.value,
-                  child: Opacity(
-                    opacity: animationController.value,
-                    child: Image.asset('images/stethoscope.png',
-                      width: 150.0,
-                      height: 150.0,
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-              ),
+      body: Center(
+        child: Visibility(
+          visible: isVisible,
+          child: FadeTransition(
+            opacity: animation,
+            child: Image.asset(
+              'images/stethoscope.png',
+              width: 170.0,
+              height: 170.0,
+              fit: BoxFit.cover,
             ),
           ),
-          SpinKitRing(
-            color: HexColor('0571d5'),
-            size: 30.0,
-            lineWidth: 3.0,
-          ),
-          const SizedBox(
-            height: 40.0,
-          ),
-        ],
+        ),
       ),
     );
   }
