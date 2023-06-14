@@ -119,7 +119,6 @@ class _AddMedicationInStockScreenState
                   ),
                   child: Form(
                     key: formKey,
-                    // autovalidateMode: AutovalidateMode.always,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -447,7 +446,7 @@ class _AddMedicationInStockScreenState
                                         medicationId:
                                         widget.medication.medicationId,
                                         pharmacyId: pharmacyId,
-                                        body: (userProfile?.user?.name)!.toString(),
+                                        body: (userProfile?.user?.name).toString(),
                                         idUser: pharmacists,
                                     );
                                     focusNode1.unfocus();
