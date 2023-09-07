@@ -1,17 +1,7 @@
 # project_final
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter CareCove application that offers a communication between patient , doctor and pharmacist.
+A new Flutter app project -->  CareCove application that offers a communication between patient , doctor and pharmacist.
 Also, there is an admin for gestion accounts.
 
-A few resources to get you started if this is your first Flutter project:
+UI (some screens) --> (https://github.com/SellamiWalid/carecove_app/assets/119450519/dd812e8e-09b7-4fb6-b975-f0c3abe6b4f9)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
