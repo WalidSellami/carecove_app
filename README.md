@@ -1,4 +1,4 @@
-# project_final
+# CareCove
 
 A new Flutter app project -->  CareCove application that offers a communication between patient , doctor and pharmacist.
 Also, there is an admin for gestion accounts.
