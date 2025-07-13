@@ -7,6 +7,6 @@ A Flutter-based application enabling seamless communication between patients, do
 ![1](https://github.com/SellamiWalid/carecove_app/assets/119450519/c532c966-a74c-46f9-9f35-2325ab262d4e)
 
 > 📸 **Note:** The following section contains images.  
-> ⏳ Depending on your internet connection, they may take a few seconds to load. Please be patient.
+> ⏳ Depending on your internet connection, they may take a few seconds to load.
 
 
