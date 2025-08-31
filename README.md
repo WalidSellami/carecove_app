@@ -4,7 +4,7 @@ A Flutter-based application enabling seamless communication between patients, do
 
 ## UI/UX (some screens)
 
-![1](https://github.com/user-attachments/assets/3f0e8a7b-ad71-4640-9326-1a280d28fc49)
+![1](https://github.com/SellamiWalid/carecove_app/assets/119450519/c532c966-a74c-46f9-9f35-2325ab262d4e)
 
 ![2](https://github.com/user-attachments/assets/5ec0a3ca-5bc3-4ef8-8570-63162058b86e)
 
@@ -12,6 +12,7 @@ A Flutter-based application enabling seamless communication between patients, do
 
 
 > 📸 **Note:** The following section contains images.
+
 > ⏳ Depending on your internet connection, they may take a few seconds to load.
 
 
