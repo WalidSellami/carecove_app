@@ -10,7 +10,5 @@ A Flutter-based application enabling seamless communication between patients, do
 
 ![3](https://github.com/user-attachments/assets/eed33dca-85a6-4a59-9a11-f9c1f53b799b)
 
-
-
 > 📸 **Note:** The following section contains images.
 > ⏳ Depending on your internet connection, they may take a few seconds to load.
