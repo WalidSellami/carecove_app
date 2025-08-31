@@ -1,6 +1,11 @@
-# CareCove
+# CareCove --> Medical Communication App
 
 A Flutter-based application enabling seamless communication between patients, doctors, and pharmacists. It also includes an admin panel for managing user accounts and system operations.
+
+## Backend Repository
+The backend for this app (built with FastAPI) is available here:  
+👉 [CareCove Backend Repo](https://github.com/WalidSellami/carecove_api)
+
 
 ## UI/UX (some screens)
 
